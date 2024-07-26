@@ -1,0 +1,15 @@
+# IDEs & Code Editors
+.idea/
+.vscode/
+.vs/
+
+# Build Files
+bin/
+obj/
+out/
+
+# User Settings
+**/Properties/launchSettings.json
+
+# Operating Systems
+.DS_Store
