@@ -1,4 +1,4 @@
-# Learning Series: ASP.NET Core Authentication & Authorization
+# Learning ASP.NET Core Authentication & Authorization
 
 This application explores how to configure authentication and authorization in ASP.NET Core.
 
