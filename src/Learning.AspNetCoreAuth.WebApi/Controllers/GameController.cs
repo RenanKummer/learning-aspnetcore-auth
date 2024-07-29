@@ -17,9 +17,9 @@ public class GameController(ILogger<GameController> logger, IGameRepository game
 
     [HttpGet("{id:int}")]
     [Produces(MediaTypeNames.Application.Json)]
-    [OpenApiOperation("Get Game", "Returns a single game filtered by ID")]
     [ProducesResponseType<Game>(StatusCodes.Status200OK)]
     [ProducesResponseType<ProblemDetails>(StatusCodes.Status404NotFound)]
+    [OpenApiOperation("Get Game", "Returns a single game filtered by ID")]
     public async Task<IActionResult> GetGame(int id)
     {
         _logger.LogInformation("Received request to fetch game by ID");
@@ -40,8 +40,8 @@ public class GameController(ILogger<GameController> logger, IGameRepository game
     
     [HttpGet]
     [Produces(MediaTypeNames.Application.Json)]
-    [OpenApiOperation("Get All Games", "Returns all the games.")]
     [ProducesResponseType<IEnumerable<Game>>(StatusCodes.Status200OK)]
+    [OpenApiOperation("Get All Games", "Returns all the games.")]
     public async Task<IActionResult> GetAllGames()
     {
         _logger.LogInformation("Received request to fetch all games");
@@ -53,6 +53,7 @@ public class GameController(ILogger<GameController> logger, IGameRepository game
     [HttpPost]
     [Produces(MediaTypeNames.Application.Json)]
     [ProducesResponseType<Game>(StatusCodes.Status201Created)]
+    [OpenApiOperation("Create Game", "Creates a single game.")]
     public async Task<IActionResult> CreateGame(GameDto game)
     {
         _logger.LogInformation("Received request to create {@Game}", game);
