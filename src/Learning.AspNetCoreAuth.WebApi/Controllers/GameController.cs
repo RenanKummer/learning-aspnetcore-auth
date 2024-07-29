@@ -2,6 +2,7 @@ using System.Net.Mime;
 using Learning.AspNetCoreAuth.Core.Models;
 using Learning.AspNetCoreAuth.Core.Repositories;
 using Learning.AspNetCoreAuth.WebApi.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NSwag.Annotations;
 
@@ -10,6 +11,7 @@ namespace Learning.AspNetCoreAuth.WebApi.Controllers;
 [ApiController]
 [Route("api/games")]
 [OpenApiTag("Games")]
+[Authorize] 
 public class GameController(ILogger<GameController> logger, IGameRepository gameRepository) : ControllerBase
 {
     private readonly ILogger<GameController> _logger = logger;

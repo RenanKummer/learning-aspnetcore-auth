@@ -12,5 +12,6 @@ public static class ServiceCollectionExtensions
     /// <param name="services">The services instance.</param>
     /// <returns>The <see cref="IServiceCollection"/> so that additional calls can be chained.</returns>
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services) => services
-        .AddSingleton<IGameRepository, LocalGameRepository>();
+        .AddSingleton<IGameRepository, LocalGameRepository>()
+        .AddSingleton<IUserRepository, LocalUserRepository>();
 }
