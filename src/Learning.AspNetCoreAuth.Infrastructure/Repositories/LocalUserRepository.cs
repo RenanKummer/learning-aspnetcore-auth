@@ -15,6 +15,7 @@ public class LocalUserRepository : IUserRepository
             Id = "john.doe", 
             Name = "John Doe",
             Password = "A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ=", // 1234
+            GoogleId = "",
             Claims = 
             [
                 new UserClaim(ClaimTypes.NameIdentifier, "john.doe"),
@@ -33,5 +34,11 @@ public class LocalUserRepository : IUserRepository
         return _users.TryGetValue(id, out var user) && user.Password == base64Password
             ? Task.FromResult<User?>(user)
             : Task.FromResult<User?>(null);
+    }
+
+    public Task<User?> FindByGoogleIdAsync(string id)
+    {
+        var user = _users.FirstOrDefault(user => user.Value.GoogleId == id).Value;
+        return Task.FromResult<User?>(user);
     }
 }

@@ -14,4 +14,11 @@ public interface IUserRepository
     /// <param name="password">The user password.</param>
     /// <returns>The user if found, <c>null</c> otherwise.</returns>
     public Task<User?> FindByCredentialsAsync(string id, string password);
+
+    /// <summary>
+    /// Fetches user filtering by given Google ID.
+    /// </summary>
+    /// <param name="id">The Google identifier.</param>
+    /// <returns>The user if found, <c>null</c> otherwise.</returns>
+    public Task<User?> FindByGoogleIdAsync(string id);
 }

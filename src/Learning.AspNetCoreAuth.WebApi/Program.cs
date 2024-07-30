@@ -22,7 +22,8 @@ try
 
     builder
         .ConfigureOptions()
-        .ConfigureLoggingProvider();
+        .ConfigureLoggingProvider()
+        .ConfigureAuthentication();
 
     builder.Services
         .AddCoreServices()

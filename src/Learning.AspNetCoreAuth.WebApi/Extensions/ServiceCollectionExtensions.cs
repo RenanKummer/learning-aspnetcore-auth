@@ -22,9 +22,6 @@ public static class ServiceCollectionExtensions
                 options.JsonSerializerOptions.AllowTrailingCommas = true;
                 options.JsonSerializerOptions.ReadCommentHandling = JsonCommentHandling.Skip;
             });
-
-        services.AddAuthentication()
-            .AddCookie();
         
         return services
             .AddOpenApi()

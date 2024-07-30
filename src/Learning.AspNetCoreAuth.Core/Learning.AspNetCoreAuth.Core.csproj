@@ -11,4 +11,16 @@
     <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Models\Options\IdentityProviderOptions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Models\Options\IdentityProviderOptions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Models\Options\IdentityProviderOptions\**" />
+  </ItemGroup>
+
 </Project>

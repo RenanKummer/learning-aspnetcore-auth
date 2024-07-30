@@ -40,7 +40,9 @@ $ git clone https://github.com/RenanKummer/learning-aspnetcore-auth.git
       "dotnetRunMessages": true,
       "applicationUrl": "http://localhost:8080",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "IdentityProviders__Google__ClientId": "<google-oauth-client-id>",
+        "IdentityProviders__Google__ClientPassword": "<google-oauth-client-password>"
       }
     }
   }
